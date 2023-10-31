@@ -1,0 +1,113 @@
+.footer-container {
+  padding: 20px 0;
+  color: #7a7d64;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    "footer-links-left footer-links-left footer-logo footer-links-right footer-links-right"
+    "footer-privacy-policy footer-privacy-policy footer-logo footer-phone footer-phone";
+}
+
+.footer-links-left {
+  grid-area: footer-links-left;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer-links-right {
+  grid-area: footer-links-right;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-links-left ul,
+.footer-links-right ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links-left li,
+.footer-links-right li {
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.footer-links-right li:last-child {
+  margin-right: 30px;
+}
+
+.footer-logo {
+  cursor: pointer;
+  grid-area: footer-logo;
+}
+
+.footer-phone {
+  cursor: pointer;
+  grid-area: footer-phone;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.footer-privacy-policy {
+  cursor: pointer;
+  grid-area: footer-privacy-policy;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+
+@media (width < 1010px) {
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "footer-links-left footer-links-left footer-links-left"
+      "footer-links-right footer-links-right footer-links-right"
+      "footer-privacy-policy footer-logo footer-phone";
+  }
+
+  .footer-links-left,
+  .footer-links-right {
+    font-size: 3vw;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-phone {
+    font-size: 2.5vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-privacy-policy {
+    font-size: 2vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-container .footer-logo img {
+    display: none;
+  }
+
+  .footer-links-left li,
+  .footer-links-right li {
+    font-size: clamp(10px, 3vw, 24px);
+    max-height: 10px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  .footer-links-right li:last-child {
+    margin-right: 0;
+  }
+}

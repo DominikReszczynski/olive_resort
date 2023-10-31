@@ -1,0 +1,16 @@
+.hopeui_style-breadcrumb {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  font-family: Marcellus, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: Marcellus, source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
